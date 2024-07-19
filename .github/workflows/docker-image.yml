@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file  Karaoke.WebApi/Dockerfile
+      run: docker build -t chagasduarte/karaoke.webapi . --file Karaoke.WebApi/Dockerfile
   
   push:
     needs: build
@@ -23,8 +23,6 @@ jobs:
     steps:
     - name: Login no DockerHub
       run: docker login -u ${{ secrets.DOCKERHUB_USER }} -p ${{ secrets.DOCKERHUB_PASSWORD }}
-    - name: Build docker image
-      run: docker build -t chagasduarte/karaoke.webapi .
     - name: Push image Docker
       run: docker push chagasduarte/karaoke.webapi
 
