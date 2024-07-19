@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Karaoke.Domain": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

@@ -1,0 +1,213 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projetos\\Karaoke.WebApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1BC8F208-79D2-4147-86D3-CD1AAB7A548A}|Karaoke.WebApi.Test\\Karaoke.WebApi.Test.csproj|c:\\projetos\\karaoke.webapi\\karaoke.webapi.test\\resttest\\youtubeapiresttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BC8F208-79D2-4147-86D3-CD1AAB7A548A}|Karaoke.WebApi.Test\\Karaoke.WebApi.Test.csproj|solutionrelative:karaoke.webapi.test\\resttest\\youtubeapiresttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BC8F208-79D2-4147-86D3-CD1AAB7A548A}|Karaoke.WebApi.Test\\Karaoke.WebApi.Test.csproj|c:\\projetos\\karaoke.webapi\\karaoke.webapi.test\\karaoke.webapi.test.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1BC8F208-79D2-4147-86D3-CD1AAB7A548A}|Karaoke.WebApi.Test\\Karaoke.WebApi.Test.csproj|solutionrelative:karaoke.webapi.test\\karaoke.webapi.test.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{865D86F7-24E3-49AF-B6CE-6C957EFB4744}|Karaoke.WebApi\\Karaoke.WebApi.csproj|c:\\projetos\\karaoke.webapi\\karaoke.webapi\\controllers\\playerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{865D86F7-24E3-49AF-B6CE-6C957EFB4744}|Karaoke.WebApi\\Karaoke.WebApi.csproj|solutionrelative:karaoke.webapi\\controllers\\playerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{865D86F7-24E3-49AF-B6CE-6C957EFB4744}|Karaoke.WebApi\\Karaoke.WebApi.csproj|c:\\projetos\\karaoke.webapi\\karaoke.webapi\\controllers\\karaokescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{865D86F7-24E3-49AF-B6CE-6C957EFB4744}|Karaoke.WebApi\\Karaoke.WebApi.csproj|solutionrelative:karaoke.webapi\\controllers\\karaokescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{865D86F7-24E3-49AF-B6CE-6C957EFB4744}|Karaoke.WebApi\\Karaoke.WebApi.csproj|c:\\projetos\\karaoke.webapi\\karaoke.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{865D86F7-24E3-49AF-B6CE-6C957EFB4744}|Karaoke.WebApi\\Karaoke.WebApi.csproj|solutionrelative:karaoke.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B11F441D-5827-4439-B84C-C0500726DBB3}|Karaoke.Infrastruct\\Karaoke.Infrastruct.csproj|c:\\projetos\\karaoke.webapi\\karaoke.infrastruct\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B11F441D-5827-4439-B84C-C0500726DBB3}|Karaoke.Infrastruct\\Karaoke.Infrastruct.csproj|solutionrelative:karaoke.infrastruct\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A54A322-24B3-4743-88DA-A9D50E67BE27}|Karaoke.Domain\\Karaoke.Domain.csproj|c:\\projetos\\karaoke.webapi\\karaoke.domain\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A54A322-24B3-4743-88DA-A9D50E67BE27}|Karaoke.Domain\\Karaoke.Domain.csproj|solutionrelative:karaoke.domain\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A54A322-24B3-4743-88DA-A9D50E67BE27}|Karaoke.Domain\\Karaoke.Domain.csproj|c:\\projetos\\karaoke.webapi\\karaoke.domain\\models\\karaoke\\karaoke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A54A322-24B3-4743-88DA-A9D50E67BE27}|Karaoke.Domain\\Karaoke.Domain.csproj|solutionrelative:karaoke.domain\\models\\karaoke\\karaoke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B11F441D-5827-4439-B84C-C0500726DBB3}|Karaoke.Infrastruct\\Karaoke.Infrastruct.csproj|c:\\projetos\\karaoke.webapi\\karaoke.infrastruct\\services\\playlistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B11F441D-5827-4439-B84C-C0500726DBB3}|Karaoke.Infrastruct\\Karaoke.Infrastruct.csproj|solutionrelative:karaoke.infrastruct\\services\\playlistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{865D86F7-24E3-49AF-B6CE-6C957EFB4744}|Karaoke.WebApi\\Karaoke.WebApi.csproj|c:\\projetos\\karaoke.webapi\\karaoke.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{865D86F7-24E3-49AF-B6CE-6C957EFB4744}|Karaoke.WebApi\\Karaoke.WebApi.csproj|solutionrelative:karaoke.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B11F441D-5827-4439-B84C-C0500726DBB3}|Karaoke.Infrastruct\\Karaoke.Infrastruct.csproj|c:\\projetos\\karaoke.webapi\\karaoke.infrastruct\\services\\videoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B11F441D-5827-4439-B84C-C0500726DBB3}|Karaoke.Infrastruct\\Karaoke.Infrastruct.csproj|solutionrelative:karaoke.infrastruct\\services\\videoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B11F441D-5827-4439-B84C-C0500726DBB3}|Karaoke.Infrastruct\\Karaoke.Infrastruct.csproj|c:\\projetos\\karaoke.webapi\\karaoke.infrastruct\\rest\\geturlrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B11F441D-5827-4439-B84C-C0500726DBB3}|Karaoke.Infrastruct\\Karaoke.Infrastruct.csproj|solutionrelative:karaoke.infrastruct\\rest\\geturlrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Karaoke.WebApi.Test.csproj",
+              "DocumentMoniker": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.WebApi.Test\\Karaoke.WebApi.Test.csproj",
+              "RelativeDocumentMoniker": "Karaoke.WebApi.Test\\Karaoke.WebApi.Test.csproj",
+              "ToolTip": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.WebApi.Test\\Karaoke.WebApi.Test.csproj",
+              "RelativeToolTip": "Karaoke.WebApi.Test\\Karaoke.WebApi.Test.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwgAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-07-19T19:50:01.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "YoutubeApiRestTest.cs",
+              "DocumentMoniker": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.WebApi.Test\\RestTest\\YoutubeApiRestTest.cs",
+              "RelativeDocumentMoniker": "Karaoke.WebApi.Test\\RestTest\\YoutubeApiRestTest.cs",
+              "ToolTip": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.WebApi.Test\\RestTest\\YoutubeApiRestTest.cs",
+              "RelativeToolTip": "Karaoke.WebApi.Test\\RestTest\\YoutubeApiRestTest.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAADwvxcAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T19:51:24.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayersController.cs",
+              "DocumentMoniker": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.WebApi\\Controllers\\PlayersController.cs",
+              "RelativeDocumentMoniker": "Karaoke.WebApi\\Controllers\\PlayersController.cs",
+              "ToolTip": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.WebApi\\Controllers\\PlayersController.cs",
+              "RelativeToolTip": "Karaoke.WebApi\\Controllers\\PlayersController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T19:44:29.465Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "KaraokesController.cs",
+              "DocumentMoniker": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.WebApi\\Controllers\\KaraokesController.cs",
+              "RelativeDocumentMoniker": "Karaoke.WebApi\\Controllers\\KaraokesController.cs",
+              "ToolTip": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.WebApi\\Controllers\\KaraokesController.cs",
+              "RelativeToolTip": "Karaoke.WebApi\\Controllers\\KaraokesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T19:43:40.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.Infrastruct\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Karaoke.Infrastruct\\Context\\AppDbContext.cs",
+              "ToolTip": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.Infrastruct\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "Karaoke.Infrastruct\\Context\\AppDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T19:28:46.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.Domain\\Models\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Karaoke.Domain\\Models\\AppDbContext.cs",
+              "ToolTip": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.Domain\\Models\\AppDbContext.cs",
+              "RelativeToolTip": "Karaoke.Domain\\Models\\AppDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T19:25:53.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Karaoke.cs",
+              "DocumentMoniker": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.Domain\\Models\\Karaoke\\Karaoke.cs",
+              "RelativeDocumentMoniker": "Karaoke.Domain\\Models\\Karaoke\\Karaoke.cs",
+              "ToolTip": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.Domain\\Models\\Karaoke\\Karaoke.cs",
+              "RelativeToolTip": "Karaoke.Domain\\Models\\Karaoke\\Karaoke.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T19:19:17.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.WebApi\\appsettings.json",
+              "RelativeDocumentMoniker": "Karaoke.WebApi\\appsettings.json",
+              "ToolTip": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.WebApi\\appsettings.json",
+              "RelativeToolTip": "Karaoke.WebApi\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-19T18:54:16.299Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "VideoService.cs",
+              "DocumentMoniker": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.Infrastruct\\Services\\VideoService.cs",
+              "RelativeDocumentMoniker": "Karaoke.Infrastruct\\Services\\VideoService.cs",
+              "ToolTip": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.Infrastruct\\Services\\VideoService.cs",
+              "RelativeToolTip": "Karaoke.Infrastruct\\Services\\VideoService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T18:23:45.428Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "Karaoke.WebApi\\Program.cs",
+              "ToolTip": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.WebApi\\Program.cs",
+              "RelativeToolTip": "Karaoke.WebApi\\Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T18:23:42.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PlaylistService.cs",
+              "DocumentMoniker": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.Infrastruct\\Services\\PlaylistService.cs",
+              "RelativeDocumentMoniker": "Karaoke.Infrastruct\\Services\\PlaylistService.cs",
+              "ToolTip": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.Infrastruct\\Services\\PlaylistService.cs",
+              "RelativeToolTip": "Karaoke.Infrastruct\\Services\\PlaylistService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T18:23:36.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GetUrlRequest.cs",
+              "DocumentMoniker": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.Infrastruct\\Rest\\GetUrlRequest.cs",
+              "RelativeDocumentMoniker": "Karaoke.Infrastruct\\Rest\\GetUrlRequest.cs",
+              "ToolTip": "C:\\Projetos\\Karaoke.WebApi\\Karaoke.Infrastruct\\Rest\\GetUrlRequest.cs",
+              "RelativeToolTip": "Karaoke.Infrastruct\\Rest\\GetUrlRequest.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T18:22:54.287Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
