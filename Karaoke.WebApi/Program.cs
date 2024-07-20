@@ -23,6 +23,7 @@ builder.Services.AddTransient<IPlaylistService, PlaylistService>();
 builder.Services.AddTransient<IYoutubeApi, YoutubeApiRest>();
 builder.Services.AddTransient<IVideoService, VideoService>();
 builder.Services.AddScoped<IGetUrlRequest, GetUrlRequest>();
+builder.Services.AddSingleton<IListKaraokeService, ListKaraokeService>();
 
 builder.Services.AddSingleton(builder.Configuration.GetSection("AplicationSettings").Get<AplicationSettings>());
 
