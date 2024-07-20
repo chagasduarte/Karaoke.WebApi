@@ -5,13 +5,13 @@ namespace Karaoke.Infrastruct.Services
 {
     public class ListKaraokeService : IListKaraokeService
     {
-        public List<ListKaraoke> listKaraokes;
+        public List<Karaokes> listKaraokes;
         public ListKaraokeService() 
         { 
-            listKaraokes = new List<ListKaraoke>();
+            listKaraokes = new List<Karaokes>();
         }
 
-        public ListKaraoke AddKaraoke(ListKaraoke karaoke)
+        public Karaokes AddKaraoke(Karaokes karaoke)
         {
             listKaraokes.Add(karaoke);
             return karaoke;
@@ -22,7 +22,7 @@ namespace Karaoke.Infrastruct.Services
             listKaraokes.OrderBy(x => x.Ordem);
         }
 
-        public Boolean RemoveKaraoke(ListKaraoke karaoke)
+        public Boolean RemoveKaraoke(Karaokes karaoke)
         {
             return listKaraokes.Remove(karaoke);
         }
