@@ -7,22 +7,14 @@ on:
     branches: [ "master" ]
 
 jobs:
-
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: docker build -t ${{ secrets.DOCKERHUB_USER }}/karaoke.webapi . --file Karaoke.WebApi/Dockerfile
   
   push:
-    needs: build
     runs-on: ubuntu-latest
     steps:
     - name: Login no DockerHub
       run: docker login -u ${{ secrets.DOCKERHUB_USER }} -p ${{ secrets.DOCKERHUB_PASSWORD }}
+    - name: Build the Docker image
+      run: docker build -t chagasduarte/karaoke.webapi . --file Karaoke.WebApi/Dockerfile
     - name: Push image Docker
-      run: docker push ${{ secrets.DOCKERHUB_USER }}/karaoke.webapi
+      run: docker push chagasduarte/karaoke.webapi
 
