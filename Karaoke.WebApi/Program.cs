@@ -23,7 +23,12 @@ builder.Services.AddTransient<IPlaylistService, PlaylistService>();
 builder.Services.AddTransient<IYoutubeApi, YoutubeApiRest>();
 builder.Services.AddTransient<IVideoService, VideoService>();
 builder.Services.AddScoped<IGetUrlRequest, GetUrlRequest>();
-builder.Services.AddSingleton<IListKaraokeService, ListKaraokeService>();
+builder.Services.AddTransient<IListKaraokeService, ListKaraokeService>();
+
+builder.Services.AddTransient<IKaraokeRest, KaraokeRest>();
+builder.Services.AddTransient<IKaraokeService, KaraokeService>();
+builder.Services.AddTransient<IPlayerRest, PlayerRest>();
+builder.Services.AddTransient<IPlayerService, PlayerService>();
 
 builder.Services.AddSingleton(builder.Configuration.GetSection("AplicationSettings").Get<AplicationSettings>());
 
@@ -32,6 +37,7 @@ builder.Services.AddSingleton(builder.Configuration.GetSection("AplicationSettin
 builder.Services.AddAutoMapper(typeof(PlaylistMapping));
 builder.Services.AddAutoMapper(typeof(VideosMapping));
 builder.Services.AddAutoMapper(typeof(YoutubeMapping));
+builder.Services.AddAutoMapper(typeof(KaraokeMapping));
 
 
 var app = builder.Build();

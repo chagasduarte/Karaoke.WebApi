@@ -1,32 +1,64 @@
 ﻿using Karaoke.Domain.Interfaces;
 using Karaoke.Domain.Models.Karaoke;
+using Karaoke.Domain.Models.Players;
+using Karaoke.Infrastruct.Rest;
 
 namespace Karaoke.Infrastruct.Services
 {
     public class ListKaraokeService : IListKaraokeService
     {
-        public List<Karaokes> listKaraokes;
-        public ListKaraokeService() 
-        { 
-            listKaraokes = new List<Karaokes>();
-        }
+        public readonly IPlayerRest _playrRest;
+        public readonly IKaraokeRest _karaokeRest;
 
-        public Karaokes AddKaraoke(Karaokes karaoke)
+        public IEnumerable<Karaokes> ListKaraokes { get; set; }
+        public IEnumerable<Player> ListPlayer { get; set; }
+
+        public ListKaraokeService(IKaraokeRest karaokeRest, IPlayerRest playrRest) 
         {
-            listKaraokes.Add(karaoke);
-            return karaoke;
+            _playrRest = playrRest;
+            _karaokeRest = karaokeRest;
         }
 
-        public void OrdenaLista()
+        public async void SetListKaraoke()
         {
-            listKaraokes.OrderBy(x => x.Ordem);
+            var response  = await _karaokeRest.GetKaraokes();
+            ListKaraokes = response.ReturnData.Where(x => x.Ordem < 0);
         }
 
-        public Boolean RemoveKaraoke(Karaokes karaoke)
+        public async void SetListPlayer()
         {
-            return listKaraokes.Remove(karaoke);
+            var response = await _playrRest.GetPlayer();
+            ListPlayer = response.ReturnData;
         }
 
+        public void AddKaraoke(Karaokes karaokes)
+        {
+            Player player = new Player();
+            
+            Player newPlayer = ListPlayer.Where(x => x.Id == karaokes.PlayerId).First();
+
+            for (int i = 0; i <= ListKaraokes.Count(); i++)
+            {
+                Karaokes k = ListKaraokes.Where(x => x.Id == i).First();
+
+                player = ListPlayer.Where(x => x.Id == k.PlayerId).First();
+                if ( player.QtdMusicasCanatda < newPlayer.QtdMusicasCanatda )
+                {
+                    karaokes.Ordem = k.Ordem;
+                    AjusteOrdem(i);
+                    return;
+                }
+            }
+        }
+
+        private void AjusteOrdem(int n)
+        {
+            for (int i = n; i <= ListKaraokes.Count(); i++)
+            {
+                
+            }
+
+        }
 
     }
 }

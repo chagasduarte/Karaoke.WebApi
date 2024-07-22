@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Karaoke.Infrastruct.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240720134856_AdicaoNovoCampo")]
+    [Migration("20240720215201_AdicaoNovoCampo")]
     partial class AdicaoNovoCampo
     {
         /// <inheritdoc />
