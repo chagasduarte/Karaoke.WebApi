@@ -44,6 +44,7 @@ namespace Karaoke.Infrastruct.Services
                 player = ListPlayer.Where(x => x.Id == k.PlayerId).First();
                 if ( player.QtdMusicasCanatda < newPlayer.QtdMusicasCanatda )
                 {
+                    _karaokeRest.PostKaraokes( karaokes );
                     karaokes.Ordem = k.Ordem;
                     AjusteOrdem(i);
                     return;
@@ -55,7 +56,8 @@ namespace Karaoke.Infrastruct.Services
         {
             for (int i = n; i <= ListKaraokes.Count(); i++)
             {
-                
+                ListKaraokes.ElementAt(i).Ordem++;
+                _karaokeRest.PutKaraokes(ListKaraokes.ElementAt(i).Id, ListKaraokes.ElementAt(i));
             }
 
         }
