@@ -5,7 +5,7 @@
 namespace Karaoke.Infrastruct.Migrations
 {
     /// <inheritdoc />
-    public partial class Initional2 : Migration
+    public partial class AdicaoNovoCampo : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,7 +17,8 @@ namespace Karaoke.Infrastruct.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     PlayerId = table.Column<int>(type: "INTEGER", nullable: false),
-                    Music = table.Column<string>(type: "TEXT", nullable: true)
+                    Music = table.Column<string>(type: "TEXT", nullable: true),
+                    Ordem = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {

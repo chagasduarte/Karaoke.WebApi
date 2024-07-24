@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using Karaoke.Domain.Interfaces;
+using Karaoke.Domain.Models.Karaoke;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Karaoke.Domain.Models.Karaoke;
-using Karaoke.Infrastruct.Context;
+using System.Net;
 
 namespace Karaoke.WebApi.Controllers
 {
@@ -14,32 +10,43 @@ namespace Karaoke.WebApi.Controllers
     [ApiController]
     public class KaraokesController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly IKaraokeService _karaokeService;
 
-        public KaraokesController(AppDbContext context)
+        public KaraokesController(IKaraokeService karaokeService)
         {
-            _context = context;
+            _karaokeService = karaokeService;
         }
 
         // GET: api/Karaokes
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Karaokes>>> GetKaraokes()
+        public async Task<ActionResult> GetKaraokes()
         {
-            return await _context.Karaokes.ToListAsync();
+            var response = await _karaokeService.GetKaraokes();
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                return Ok(response.ReturnData);
+            }
+            else
+            {
+                return StatusCode((int)response.StatusCode, response.ReturnError);
+            }
         }
 
         // GET: api/Karaokes/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Karaokes>> GetKaraokes(int id)
+        public async Task<ActionResult> GetKaraokes(int id)
         {
-            var karaokes = await _context.Karaokes.FindAsync(id);
+            var response = await _karaokeService.GetKaraokes(id);
 
-            if (karaokes == null)
+            if (response.StatusCode == HttpStatusCode.OK)
             {
-                return NotFound();
+                return Ok(response.ReturnData);
             }
-
-            return karaokes;
+            else
+            {
+                return StatusCode((int)response.StatusCode, response.ReturnError);
+            }
         }
 
         // PUT: api/Karaokes/5
@@ -47,30 +54,16 @@ namespace Karaoke.WebApi.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutKaraokes(int id, Karaokes karaokes)
         {
-            if (id != karaokes.Id)
-            {
-                return BadRequest();
-            }
+            var response = await _karaokeService.PutKaraokes(id, karaokes);
 
-            _context.Entry(karaokes).State = EntityState.Modified;
-
-            try
+            if (response.StatusCode == HttpStatusCode.OK)
             {
-                await _context.SaveChangesAsync();
+                return Ok(response.ReturnData);
             }
-            catch (DbUpdateConcurrencyException)
+            else
             {
-                if (!KaraokesExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return StatusCode((int)response.StatusCode, response.ReturnError);
             }
-
-            return NoContent();
         }
 
         // POST: api/Karaokes
@@ -78,31 +71,33 @@ namespace Karaoke.WebApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Karaokes>> PostKaraokes(Karaokes karaokes)
         {
-            _context.Karaokes.Add(karaokes);
-            await _context.SaveChangesAsync();
+            var response = await _karaokeService.PostKaraokes(karaokes);
 
-            return CreatedAtAction("GetKaraokes", new { id = karaokes.Id }, karaokes);
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                return Ok(response.ReturnData);
+            }
+            else
+            {
+                return StatusCode((int)response.StatusCode, response.ReturnError);
+            }
         }
 
         // DELETE: api/Karaokes/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteKaraokes(int id)
         {
-            var karaokes = await _context.Karaokes.FindAsync(id);
-            if (karaokes == null)
+            var response = await _karaokeService.DeleteKaraokes(id);
+
+            if (response.StatusCode == HttpStatusCode.OK)
             {
-                return NotFound();
+                return Ok(response.ReturnData);
             }
-
-            _context.Karaokes.Remove(karaokes);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            else
+            {
+                return StatusCode((int)response.StatusCode, response.ReturnError);
+            }
         }
 
-        private bool KaraokesExists(int id)
-        {
-            return _context.Karaokes.Any(e => e.Id == id);
-        }
     }
 }

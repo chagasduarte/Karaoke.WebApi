@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using Karaoke.Domain.Interfaces;
 using Karaoke.Domain.Models.Players;
 using Karaoke.Infrastruct.Context;
+using Karaoke.Infrastruct.Services;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Net;
 
 namespace Karaoke.WebApi.Controllers
 {
@@ -14,32 +12,43 @@ namespace Karaoke.WebApi.Controllers
     [ApiController]
     public class PlayersController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly IPlayerRest _playerService;
 
-        public PlayersController(AppDbContext context)
+        public PlayersController(IPlayerRest playerService)
         {
-            _context = context;
+            _playerService = playerService;
         }
 
         // GET: api/Players
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Player>>> GetPlayers()
         {
-            return await _context.Players.ToListAsync();
+            var response = await _playerService.GetPlayer();
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                return Ok(response.ReturnData);
+            }
+            else
+            {
+                return StatusCode((int)response.StatusCode, response.ReturnError);
+            }
         }
 
         // GET: api/Players/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Player>> GetPlayer(int id)
         {
-            var player = await _context.Players.FindAsync(id);
+            var response = await _playerService.GetPlayer(id);
 
-            if (player == null)
+            if (response.StatusCode == HttpStatusCode.OK)
             {
-                return NotFound();
+                return Ok(response.ReturnData);
             }
-
-            return player;
+            else
+            {
+                return StatusCode((int)response.StatusCode, response.ReturnError);
+            }
         }
 
         // PUT: api/Players/5
@@ -47,30 +56,16 @@ namespace Karaoke.WebApi.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPlayer(int id, Player player)
         {
-            if (id != player.Id)
-            {
-                return BadRequest();
-            }
+            var response = await _playerService.PutPlayer(id, player);
 
-            _context.Entry(player).State = EntityState.Modified;
-
-            try
+            if (response.StatusCode == HttpStatusCode.OK)
             {
-                await _context.SaveChangesAsync();
+                return Ok(response.ReturnData);
             }
-            catch (DbUpdateConcurrencyException)
+            else
             {
-                if (!PlayerExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return StatusCode((int)response.StatusCode, response.ReturnError);
             }
-
-            return NoContent();
         }
 
         // POST: api/Players
@@ -78,31 +73,32 @@ namespace Karaoke.WebApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Player>> PostPlayer(Player player)
         {
-            _context.Players.Add(player);
-            await _context.SaveChangesAsync();
+            var response = await _playerService.PostPlayer(player);
 
-            return CreatedAtAction("GetPlayer", new { id = player.Id }, player);
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                return Ok(response.ReturnData);
+            }
+            else
+            {
+                return StatusCode((int)response.StatusCode, response.ReturnError);
+            }
         }
 
         // DELETE: api/Players/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePlayer(int id)
         {
-            var player = await _context.Players.FindAsync(id);
-            if (player == null)
+            var response = await _playerService.DeletePlayer(id);
+
+            if (response.StatusCode == HttpStatusCode.OK)
             {
-                return NotFound();
+                return Ok(response.ReturnData);
             }
-
-            _context.Players.Remove(player);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
-
-        private bool PlayerExists(int id)
-        {
-            return _context.Players.Any(e => e.Id == id);
+            else
+            {
+                return StatusCode((int)response.StatusCode, response.ReturnError);
+            }
         }
     }
 }
